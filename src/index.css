@@ -1,21 +1,125 @@
-body {
-  margin: 0;
-  padding: 20px 40px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/**
+* Template Name: ZenBlog
+* Updated: Sep 18 2023 with Bootstrap v5.3.2
+* Template URL: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
+* Author: BootstrapMade.com
+* License: https:///bootstrapmade.com/license/
+*/
+
+/**
+* Check out variables.css for easy customization of colors, typography, and other repetitive properties
+*/
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: rgba(var(--color-primary-rgb), 1);
 }
 
 a {
+  color: var(--color-links);
   text-decoration: none;
-  color: black;
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  color: var(--color-links-hover);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}
+
+#main {
+  margin-top: 90px;
+}
+
+/*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+section {
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  border-bottom: 2px solid var(--color-black);
+}
+
+.section-header h2 {
+  font-size: 50px;
+  color: var(--color-black);
+}
+
+.section-header p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Scroll top button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: var(--color-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background: rgba(var(--color-primary-rgb), 0.8);
+  color: #fff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Page title
+--------------------------------------------------------------*/
+.page-title {
+  font-size: 70px;
+  color: var(--color-black);
+}
+
+/* Form Input Fieldds */
+.form-control:active,
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--color-black);
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+
+.btn.btn-primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
 }
